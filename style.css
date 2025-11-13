@@ -17,3 +17,13 @@ section h1 span {
 footer {
   line-height: 1.8;
 }
+
+/* Card hover lift effect */
+article:hover {
+  transform: translateY(-3px);
+}
+
+/* Rounded author avatars */
+article img.rounded-full {
+  border: 1px solid #e5e7eb;
+}
