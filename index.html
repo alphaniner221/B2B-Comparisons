@@ -15,29 +15,49 @@
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
             },
+            typography: (theme) => ({
+              DEFAULT: {
+                css: {
+                  '--tw-prose-body': theme('colors.gray[300]'),
+                  '--tw-prose-headings': theme('colors.white'),
+                  '--tw-prose-lead': theme('colors.gray[400]'),
+                  '--tw-prose-links': theme('colors.purple[400]'),
+                  '--tw-prose-bold': theme('colors.white'),
+                  '--tw-prose-counters': theme('colors.gray[400]'),
+                  '--tw-prose-bullets': theme('colors.gray[600]'),
+                  '--tw-prose-hr': theme('colors.gray[700]'),
+                  '--tw-prose-quotes': theme('colors.gray[200]'),
+                  '--tw-prose-quote-borders': theme('colors.gray[700]'),
+                  '--tw-prose-captions': theme('colors.gray[400]'),
+                  '--tw-prose-code': theme('colors.white'),
+                  '--tw-prose-pre-code': theme('colors.gray[300]'),
+                  '--tw-prose-pre-bg': theme('colors.gray[800]'),
+                  '--tw-prose-th-borders': theme('colors.gray[600]'),
+                  '--tw-prose-td-borders': theme('colors.gray[700]'),
+                },
+              },
+            }),
           },
         },
+        plugins: [
+            require('@tailwindcss/typography'),
+        ],
       }
     </script>
-    <!-- The translator for JSX/TSX -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="importmap">
 {
   "imports": {
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
-    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
-    "react/jsx-runtime": "https://aistudiocdn.com/react@^19.2.0/jsx-runtime",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1"
   }
 }
 </script>
 </head>
-  <body class="bg-gray-900 text-white">
+  <body class="bg-gray-900">
     <div id="root"></div>
-    <!-- Changed script type to "text/babel" to be processed by the translator -->
-    <script type="text/babel" data-type="module" src="./index.tsx"></script>
+    <script type="text/babel" src="./index.tsx"></script>
   </body>
 </html>
