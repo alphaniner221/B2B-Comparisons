@@ -1,18 +1,19 @@
-/* Custom styling for B2B Comparisons */
-
-/* Smooth transitions */
+/* Smooth transitions for hover effects */
 * {
   transition: all 0.3s ease-in-out;
 }
 
-/* Body defaults */
+/* Font and layout tweaks */
 body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Hero background (optional image example) */
-/* section.bg-blue-600 {
-  background-image: url('images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-} */
+/* Hero text alignment */
+section h1 span {
+  color: #2563eb; /* Tailwind blue-600 */
+}
+
+/* Footer adjustments */
+footer {
+  line-height: 1.8;
+}
