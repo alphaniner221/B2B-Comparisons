@@ -9,13 +9,13 @@ export interface Post {
   content: string; // Content will be a string of HTML
 }
 
-// FIX: Define and export ArticleType enum to resolve import errors.
+// FIX: Define and export ArticleType enum for content generation.
 export enum ArticleType {
-  Listicle = 'listicle',
-  Comparison = 'comparison',
+    Listicle = 'listicle',
+    Comparison = 'comparison',
 }
 
-// FIX: Define and export Tone enum to resolve import errors.
+// FIX: Define and export Tone enum for content generation.
 export enum Tone {
     Informative = 'Informative',
     Professional = 'Professional',
@@ -23,9 +23,9 @@ export enum Tone {
     Witty = 'Witty',
 }
 
-// FIX: Define and export GenerationParams interface to resolve import errors.
+// FIX: Define and export GenerationParams interface for content generation.
 export interface GenerationParams {
-  articleType: ArticleType;
-  topic: string;
-  tone: Tone;
+    articleType: ArticleType;
+    topic: string;
+    tone: Tone;
 }
