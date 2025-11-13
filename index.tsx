@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -20,28 +19,28 @@ const posts: Post[] = [
     id: 1,
     title: 'Salesforce vs. HubSpot: Which CRM Reigns Supreme for SMBs?',
     category: 'Business Software',
-    imageUrl: 'https://picsum.photos/seed/crm/800/400',
+    imageUrl: 'https://images.unsplash.com/photo-1616587896649-7ca25a7c3a7c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     excerpt: 'A deep dive into the features, pricing, and scalability of two of the biggest names in the CRM industry to help you decide.',
     content: `
-      <h1>Salesforce vs. HubSpot: The Ultimate CRM Showdown</h1>
+      <h2>The Core Difference: Philosophy</h2>
       <p>Choosing the right Customer Relationship Management (CRM) system is a critical decision for any small to medium-sized business (SMB). Two of the most dominant players in the market are Salesforce and HubSpot. While both offer robust feature sets, they cater to slightly different needs and business philosophies. This article breaks down the key differences to help you make an informed choice.</p>
       
       <h3>Key Feature Comparison</h3>
       <p>At their core, both platforms help you manage customer relationships, but their approaches differ. HubSpot is renowned for its user-friendly interface and its all-in-one marketing, sales, and service platform built from the ground up. Salesforce, on the other hand, is a powerhouse of customization and scalability, offering a vast ecosystem of apps via its AppExchange.</p>
       
-      <table class="w-full text-left border-collapse">
+      <table>
         <thead>
           <tr>
-            <th class="border-b p-2">Feature</th>
-            <th class="border-b p-2">Salesforce</th>
-            <th class="border-b p-2">HubSpot</th>
+            <th>Feature</th>
+            <th>Salesforce</th>
+            <th>HubSpot</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="border-b p-2">Ease of Use</td><td class="border-b p-2">Steeper learning curve</td><td class="border-b p-2">Highly intuitive</td></tr>
-          <tr><td class="border-b p-2">Customization</td><td class="border-b p-2">Virtually limitless</td><td class="border-b p-2">Good, but more structured</td></tr>
-          <tr><td class="border-b p-2">App Ecosystem</td><td class="border-b p-2">Massive (AppExchange)</td><td class="border-b p-2">Growing, solid integrations</td></tr>
-          <tr><td class="border-b p-2">Pricing Model</td><td class="border-b p-2">Per-user, per-month</td><td class="border-b p-2">Freemium, with tiered plans</td></tr>
+          <tr><td>Ease of Use</td><td>Steeper learning curve</td><td>Highly intuitive</td></tr>
+          <tr><td>Customization</td><td>Virtually limitless</td><td>Good, but more structured</td></tr>
+          <tr><td>App Ecosystem</td><td>Massive (AppExchange)</td><td>Growing, solid integrations</td></tr>
+          <tr><td>Pricing Model</td><td>Per-user, per-month</td><td>Freemium, with tiered plans</td></tr>
         </tbody>
       </table>
 
@@ -65,10 +64,10 @@ const posts: Post[] = [
     id: 2,
     title: 'Mailchimp vs. ConvertKit: The Email Marketing Platform Battle',
     category: 'Marketing Tech',
-    imageUrl: 'https://picsum.photos/seed/email/800/400',
+    imageUrl: 'https://images.unsplash.com/photo-1589223164103-3112c7849e79?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     excerpt: 'We compare Mailchimp\'s broad appeal against ConvertKit\'s creator-focused features to see which is better for your audience.',
     content: `
-      <h1>Mailchimp vs. ConvertKit: Choosing Your Email Champion</h1>
+      <h2>Creator-Focused vs. General Purpose</h2>
       <p>Email marketing remains one of the most effective ways to connect with your audience. Mailchimp and ConvertKit are two leading platforms, but they are built for different types of users. Mailchimp is a general-purpose tool perfect for businesses of all sizes, while ConvertKit is laser-focused on bloggers, authors, and online creators.</p>
       
       <h3>Core Philosophy and Audience</h3>
@@ -94,10 +93,10 @@ const posts: Post[] = [
     id: 3,
     title: 'Slack vs. Microsoft Teams: The Ultimate Team Collaboration Tool?',
     category: 'Business Software',
-    imageUrl: 'https://picsum.photos/seed/collab/800/400',
+    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     excerpt: 'In the world of remote work, team communication is key. We break down the differences between the channel-based chat giant and the Microsoft 365 integrated behemoth.',
     content: `
-      <h1>Slack vs. Microsoft Teams: The Communication Clash</h1>
+      <h2>Ecosystem vs. Best-in-Class</h2>
       <p>Effective team communication is the backbone of modern business. Slack and Microsoft Teams are the two undisputed leaders in this space, but they offer fundamentally different experiences and integration philosophies.</p>
       
       <h3>Integration and Ecosystem</h3>
@@ -122,42 +121,34 @@ const posts: Post[] = [
 
 // --- COMPONENTS ---
 
-// Helper Icons
-const SparkleIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+const SparkleIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
         <path d="M12 3L9.5 8.5L4 11L9.5 13.5L12 19L14.5 13.5L20 11L14.5 8.5L12 3Z" />
-        <path d="M5 3L6 5" />
-        <path d="M19 21L18 19" />
     </svg>
 );
-const ArrowRightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+
+const ArrowRightIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
     <line x1="5" y1="12" x2="19" y2="12"></line>
     <polyline points="12 5 19 12 12 19"></polyline>
   </svg>
 );
-const ArrowLeftIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+const ArrowLeftIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
     <line x1="19" y1="12" x2="5" y2="12"></line>
     <polyline points="12 19 5 12 12 5"></polyline>
   </svg>
 );
-const TwitterIcon = (props: React.SVGProps<SVGSVGElement>) => (
+const TwitterIcon = (props) => (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
 );
-const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
+const LinkedinIcon = (props) => (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
 );
 
 
-// BlogPostCard Component
-interface BlogPostCardProps {
-  post: Post;
-  onSelectPost: (post: Post) => void;
-}
-const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, onSelectPost }) => {
-  return (
-    <div className="bg-gray-800/50 border border-gray-700 rounded-lg overflow-hidden flex flex-col group">
+const BlogPostCard = ({ post, onSelectPost }) => (
+    <div className="bg-gray-800/50 border border-gray-700 rounded-lg overflow-hidden flex flex-col group transition-all duration-300 hover:border-purple-500/50 hover:bg-gray-800">
       <img src={post.imageUrl} alt={post.title} className="w-full h-48 object-cover" />
       <div className="p-6 flex flex-col flex-grow">
         <p className="text-sm font-medium text-purple-400 mb-2">{post.category}</p>
@@ -174,16 +165,9 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, onSelectPost }) => {
         </div>
       </div>
     </div>
-  );
-};
+);
 
-// PostPage Component
-interface PostPageProps {
-  post: Post;
-  onNavigateHome: () => void;
-}
-const PostPage: React.FC<PostPageProps> = ({ post, onNavigateHome }) => {
-  return (
+const PostPage = ({ post, onNavigateHome }) => (
     <article className="max-w-4xl mx-auto">
       <div className="mb-8">
         <button 
@@ -197,7 +181,7 @@ const PostPage: React.FC<PostPageProps> = ({ post, onNavigateHome }) => {
       
       <div className="space-y-4">
         <p className="text-base font-semibold text-purple-400">{post.category}</p>
-        <h1 className="text-3xl md:text-4xl font-bold text-white">{post.title}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight">{post.title}</h1>
         <img src={post.imageUrl} alt={post.title} className="w-full rounded-lg aspect-video object-cover" />
       </div>
 
@@ -206,29 +190,14 @@ const PostPage: React.FC<PostPageProps> = ({ post, onNavigateHome }) => {
         dangerouslySetInnerHTML={{ __html: post.content }} 
       />
     </article>
-  );
-};
+);
 
-// HomePage Component
-interface HomePageProps {
-  posts: Post[];
-  onSelectPost: (post: Post) => void;
-  category: Category | 'all';
-}
-const HomePage: React.FC<HomePageProps> = ({ posts, onSelectPost, category }) => {
-  const getTitle = () => {
-    if (category === 'all') {
-      return "B2B Insights & Comparisons";
-    }
-    return category;
-  }
-  
-  const getSubtitle = () => {
-     if (category === 'all') {
-      return "In-depth reviews and analysis of business software and marketing technology.";
-    }
-    return `Articles in the ${category} category.`
-  }
+const HomePage = ({ posts, onSelectPost, category }) => {
+  const getTitle = () => (category === 'all' ? "B2B Insights & Comparisons" : category);
+  const getSubtitle = () => (category === 'all' 
+    ? "In-depth reviews and analysis of business software and marketing technology."
+    : `Articles in the ${category} category.`
+  );
 
   return (
     <div className="space-y-12">
@@ -241,22 +210,14 @@ const HomePage: React.FC<HomePageProps> = ({ posts, onSelectPost, category }) =>
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {posts.map(post => (
-          <BlogPostCard key={post.id} post={post} onSelectPost={onSelectPost} />
-        ))}
+        {posts.map(post => <BlogPostCard key={post.id} post={post} onSelectPost={onSelectPost} />)}
       </div>
     </div>
   );
 };
 
-// Header Component
-interface HeaderProps {
-    onNavigateHome: () => void;
-    onSelectCategory: (category: Category) => void;
-    selectedCategory: Category | 'all';
-}
-const headerCategories: Category[] = ['Business Software', 'Marketing Tech'];
-const Header: React.FC<HeaderProps> = ({ onNavigateHome, onSelectCategory, selectedCategory }) => {
+const Header = ({ onNavigateHome, onSelectCategory, selectedCategory }) => {
+  const categories = ['Business Software', 'Marketing Tech'];
   return (
     <header className="bg-gray-900/70 backdrop-blur-sm border-b border-gray-700/50 sticky top-0 z-10">
       <div className="container mx-auto px-4">
@@ -272,26 +233,18 @@ const Header: React.FC<HeaderProps> = ({ onNavigateHome, onSelectCategory, selec
               B2B Comparisons
             </h1>
           </div>
-          <nav className="flex items-center space-x-2 sm:space-x-4">
+          <nav className="hidden sm:flex items-center space-x-4">
             <button 
                 onClick={onNavigateHome}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                    selectedCategory === 'all' 
-                    ? 'text-white' 
-                    : 'text-gray-400 hover:text-white hover:bg-gray-800'
-                }`}
+                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${selectedCategory === 'all' ? 'text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800'}`}
             >
                 Home
             </button>
-            {headerCategories.map(cat => (
+            {categories.map(cat => (
                  <button 
                     key={cat}
                     onClick={() => onSelectCategory(cat)}
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                        selectedCategory === cat
-                        ? 'text-white' 
-                        : 'text-gray-400 hover:text-white hover:bg-gray-800'
-                    }`}
+                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${selectedCategory === cat ? 'text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800'}`}
                  >
                     {cat}
                  </button>
@@ -303,9 +256,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigateHome, onSelectCategory, selec
   );
 };
 
-// Footer Component
-const Footer: React.FC = () => {
-  return (
+const Footer = () => (
     <footer className="bg-gray-900 border-t border-gray-700/50">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
@@ -313,28 +264,27 @@ const Footer: React.FC = () => {
                 &copy; {new Date().getFullYear()} B2B Comparisons. All Rights Reserved.
             </p>
             <div className="flex space-x-4">
-                <a href="#" className="text-gray-500 hover:text-white transition-colors">
+                <a href="#" className="text-gray-500 hover:text-white transition-colors" aria-label="Twitter">
                     <TwitterIcon className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-gray-500 hover:text-white transition-colors">
+                <a href="#" className="text-gray-500 hover:text-white transition-colors" aria-label="LinkedIn">
                     <LinkedinIcon className="h-5 w-5" />
                 </a>
             </div>
         </div>
       </div>
     </footer>
-  );
-};
+);
 
-// App Component
-const App: React.FC = () => {
-  const [currentView, setCurrentView] = useState<'home' | 'post'>('home');
-  const [selectedPost, setSelectedPost] = useState<Post | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<Category | 'all'>('all');
+const App = () => {
+  const [currentView, setCurrentView] = useState('home');
+  const [selectedPost, setSelectedPost] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const handleSelectPost = (post: Post) => {
+  const handleSelectPost = (post) => {
     setSelectedPost(post);
     setCurrentView('post');
+    window.scrollTo(0, 0);
   };
 
   const handleNavigateHome = () => {
@@ -343,7 +293,7 @@ const App: React.FC = () => {
     setSelectedCategory('all');
   };
   
-  const handleSelectCategory = (category: Category) => {
+  const handleSelectCategory = (category) => {
       setSelectedCategory(category);
       setCurrentView('home');
       setSelectedPost(null);
@@ -354,13 +304,13 @@ const App: React.FC = () => {
     : posts.filter(post => post.category === selectedCategory);
 
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-gray-900 text-gray-200">
+    <div className="min-h-screen flex flex-col font-sans text-gray-200">
       <Header 
         onNavigateHome={handleNavigateHome}
         onSelectCategory={handleSelectCategory}
         selectedCategory={selectedCategory}
       />
-      <main className="flex-grow container mx-auto px-4 py-8">
+      <main className="flex-grow container mx-auto px-4 py-8 sm:py-12">
         {currentView === 'home' && <HomePage posts={postsToShow} onSelectPost={handleSelectPost} category={selectedCategory} />}
         {currentView === 'post' && selectedPost && <PostPage post={selectedPost} onNavigateHome={handleNavigateHome} />}
       </main>
@@ -369,16 +319,7 @@ const App: React.FC = () => {
   );
 };
 
-
 // --- RENDER THE APP ---
 const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
-}
-
 const root = ReactDOM.createRoot(rootElement);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+root.render(<App />);
