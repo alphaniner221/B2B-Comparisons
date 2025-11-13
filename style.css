@@ -1,0 +1,18 @@
+/* Custom styling for B2B Comparisons */
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Body defaults */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Hero background (optional image example) */
+/* section.bg-blue-600 {
+  background-image: url('images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+} */
