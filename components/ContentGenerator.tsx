@@ -131,8 +131,11 @@ const ContentGenerator: React.FC = () => {
               <p>Your generated article will appear here.</p>
             </div>
           )}
+          {/* FIX: Use ReactMarkdown to correctly and safely render the generated Markdown content. The previous implementation with dangerouslySetInnerHTML and regex was brittle and could break with complex markdown like tables. */}
           {generatedContent && (
-            <div dangerouslySetInnerHTML={{ __html: generatedContent.replace(/\n/g, '<br />').replace(/### (.*?)<br \/>/g, '<h3>$1</h3>').replace(/# (.*?)<br \/>/g, '<h1>$1</h1>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {generatedContent}
+            </ReactMarkdown>
           )}
         </div>
       </div>
