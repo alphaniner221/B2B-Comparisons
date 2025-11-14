@@ -18,32 +18,7 @@
 <body class="flex flex-col min-h-screen bg-white text-gray-800">
 
   <!-- ===== HEADER ===== -->
-  <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-xl md:text-2xl font-semibold text-gray-900">B2B Comparisons</a>
-      <nav class="hidden md:flex space-x-8 text-gray-700">
-        <a href="#" class="hover:text-blue-600">Software</a>
-        <a href="#" class="hover:text-blue-600">Services</a>
-        <a href="#" class="hover:text-blue-600">Top 10s</a>
-        <a href="#" class="hover:text-blue-600">Comparisons</a>
-        <a href="#" class="hover:text-blue-600">About</a>
-      </nav>
-      <button id="menu-btn" class="md:hidden text-2xl text-gray-700">
-        <i class="fas fa-bars"></i>
-      </button>
-      <i class="hidden md:block fas fa-search text-gray-600 text-lg cursor-pointer hover:text-blue-600"></i>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden bg-white border-t md:hidden">
-      <a href="#" class="block px-6 py-3 hover:bg-gray-100">Software</a>
-      <a href="#" class="block px-6 py-3 hover:bg-gray-100">Services</a>
-      <a href="#" class="block px-6 py-3 hover:bg-gray-100">Top 10s</a>
-      <a href="#" class="block px-6 py-3 hover:bg-gray-100">Comparisons</a>
-      <a href="#" class="block px-6 py-3 hover:bg-gray-100">About</a>
-    </div>
-  </header>
-
+  <div id="header"></div>
   <!-- ===== HERO SECTION ===== -->
   <section class="text-center py-24 px-4 bg-white">
     <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
@@ -226,7 +201,8 @@
       © 2025 B2B Comparisons. All rights reserved.
     </div>
   </footer>
-
+  <div id="footer"></div>
+  <script src="load-components.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
